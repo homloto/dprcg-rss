@@ -1,4 +1,4 @@
-name: Test Workflow
+name: Test
 
 on:
   workflow_dispatch:
@@ -6,7 +6,5 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Hello
-        run: echo "Workflow Working"
+      - run: echo "Hello World"
