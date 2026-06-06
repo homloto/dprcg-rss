@@ -18,9 +18,15 @@ try:
         }
     )
 
+    print("Status Code:", r.status_code)
+    print("Page Length:", len(r.text))
+    print(r.text[:1000])
+
     soup = BeautifulSoup(r.text, "html.parser")
 
     links = soup.find_all("a")
+
+    print("Total Links Found:", len(links))
 
     count = 0
 
